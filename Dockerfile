@@ -4,4 +4,4 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-ENTRYPOINT ["node", "index.js"]
+CMD ["npm", "run", "start:dev"]
