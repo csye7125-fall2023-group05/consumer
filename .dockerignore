@@ -3,4 +3,3 @@
 node_modules/
 *.log
 logs/
-k8s/
