@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.1.0...v1.1.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* store consumer data in specified schema ([bcb49b9](https://github.com/csye7125-fall2023-group05/consumer/commit/bcb49b932bc3d2ac8f0a82cefa78e5915ecb3729)), closes [#8](https://github.com/csye7125-fall2023-group05/consumer/issues/8)
+
 # [1.1.0](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.0.0...v1.1.0) (2023-11-20)
 
 
