@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.0.0...v1.1.0) (2023-11-20)
+
+
+### Bug Fixes
+
+* add DBSCHEMA to consumer db model ([ed45253](https://github.com/csye7125-fall2023-group05/consumer/commit/ed452536519870b487337b2f344d5a2f34eaccc3))
+* update consumer group args value ([80ccf2a](https://github.com/csye7125-fall2023-group05/consumer/commit/80ccf2a889e1a6d08d74de1fe7c4ecc28d11ba3d))
+
+
+### Features
+
+* add clean exit with code 1 in case of errors ([ff2a7fa](https://github.com/csye7125-fall2023-group05/consumer/commit/ff2a7fa77888c61115fa3abd369bb42c30db2455)), closes [#6](https://github.com/csye7125-fall2023-group05/consumer/issues/6)
+
 # 1.0.0 (2023-11-16)
 
 
