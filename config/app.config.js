@@ -11,6 +11,7 @@ const {
   DB,
   DBPORT,
   DBHOST,
+  DBSCHEMA,
 } = process.env
 const consumerConfig = {
   BROKER_0,
@@ -23,6 +24,7 @@ const consumerConfig = {
   DB,
   DBPORT,
   DBHOST,
+  DBSCHEMA,
 }
 
 export default consumerConfig
