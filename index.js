@@ -6,7 +6,7 @@ import { initializeDatabase } from './models/index.model.js'
 
 const { BROKER_0, BROKER_1, BROKER_2, CLIENT_ID, TOPIC, DB } = consumerConfig
 const topics = [TOPIC]
-const groupId = process.argv[0] || 'consumerGroup'
+const groupId = process.argv[2] || 'consumerGroup'
 const brokers = [BROKER_0, BROKER_1, BROKER_2]
 
 const kafka = new Kafka({
