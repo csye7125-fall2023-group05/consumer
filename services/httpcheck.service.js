@@ -12,7 +12,7 @@ const create = async (params) => {
     response_status_code,
     check_interval_in_seconds,
   } = params
-  return HttpCheckModel.create({
+  const save = await HttpCheckModel.create({
     name,
     uri,
     is_paused,
@@ -23,6 +23,7 @@ const create = async (params) => {
     response_status_code,
     check_interval_in_seconds,
   })
+  return save
 }
 
 export default create
