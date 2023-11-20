@@ -6,7 +6,7 @@ import HttpCheck, {
   options as HttpCheckOptions,
 } from './httpcheck.model.js'
 
-const { USER, PASSWORD, DB, DBHOST, DBPORT } = appConfig
+const { USER, PASSWORD, DB, DBHOST, DBPORT, DBSCHEMA } = appConfig
 
 export const initializeDatabase = async () => {
   try {
@@ -14,6 +14,7 @@ export const initializeDatabase = async () => {
     const sequelize = new Sequelize(
       `postgres://${USER}:${PASSWORD}@${DBHOST}:${DBPORT}/${DB}`,
       {
+        schema: DBSCHEMA,
         logging: (message) => logger.verbose(message),
       }
     )
