@@ -6,7 +6,7 @@ import { initializeDatabase } from './models/index.model.js'
 
 const { BROKER_0, BROKER_1, BROKER_2, CLIENT_ID, TOPIC, DB } = consumerConfig
 const topics = [TOPIC]
-const groupId = process.argv[3] || 'consumerGroup'
+const groupId = process.argv[0] || 'consumerGroup'
 const brokers = [BROKER_0, BROKER_1, BROKER_2]
 
 const kafka = new Kafka({
@@ -26,19 +26,21 @@ const init = async () => {
 
     await consumer.run({
       eachMessage: async ({ topic, partition, message, heartbeat, pause }) => {
-        const httpCheck = await create(JSON.parse(message.value))
+        const parsedMessage = JSON.parse(message.value)
+        const httpCheck = await create(parsedMessage)
         if (httpCheck) {
-          logger.info(`Message saved to db`, { msg: message.value })
+          logger.info(`Saved in database ${DB}:`, { msg: parsedMessage })
           logger.info(`${groupId}: [${topic}]: PART:${partition}`, {
-            msg: JSON.parse(message.value),
+            msg: parsedMessage,
           })
         } else {
-          logger.error(`Unable to save in db`, { err: httpCheck })
+          logger.error(`Unable to save in database ${DB}`, { err: httpCheck })
         }
       },
     })
   } catch (error) {
-    console.log(`Kafka producer error: ${error}`)
+    logger.log(`Kafka consumer error: ${error}`)
+    process.exit(1)
   }
 }
 
@@ -49,4 +51,5 @@ initializeDatabase()
   .then(init())
   .catch((error) => {
     logger.error(`Unable to initialize database ${DB}`, { err: error })
+    process.exit(1)
   })
