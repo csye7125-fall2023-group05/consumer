@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.1.1...v1.1.2) (2023-11-22)
+
+
+### Bug Fixes
+
+* update httpcheck model ([02f8cd2](https://github.com/csye7125-fall2023-group05/consumer/commit/02f8cd231558a56bd5659ace1c53059a1833ecad))
+
 ## [1.1.1](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.1.0...v1.1.1) (2023-11-20)
 
 
