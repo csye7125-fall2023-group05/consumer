@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.1.2...v1.1.3) (2023-11-24)
+
+
+### Bug Fixes
+
+* remove nodemon file watcher ([8d794b7](https://github.com/csye7125-fall2023-group05/consumer/commit/8d794b74253582909bc2292dc05e6f7a4b688ea8))
+
 ## [1.1.2](https://github.com/csye7125-fall2023-group05/consumer/compare/v1.1.1...v1.1.2) (2023-11-22)
 
 
